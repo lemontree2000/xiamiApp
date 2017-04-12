@@ -9,7 +9,7 @@ export default {
   name: 'app'
 }
 </script>
-
+今天生病了，水一下。
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
