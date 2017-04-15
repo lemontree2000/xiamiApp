@@ -29,7 +29,7 @@ footer, header, menu, nav, section {
     display: block;
 }
 * {
-    font-family: '苹方';
+    -webkit-text-size-adjust:100%;
 }
 
 body {

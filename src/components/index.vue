@@ -26,6 +26,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
   .index-container {
+    position: relative;
     .index-header {
       height: 42px;
       background: #f83;
@@ -47,6 +48,44 @@ export default {
           text-align: left;
         }
       }
+    }
+    .menu {
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      left: 17px;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 1px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 5px;        
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 1px;
+      }
+      &::after {
+        content: '';        
+        position: absolute;        
+        bottom: 5px;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 1px;
+      }
+    }
+    .search {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      margin-top: -10px;
+      width: 20px;
+      height: 20px;
+      background: url('../assets/image/index@search.png') no-repeat 0 0;
+      background-size: 20px 20px;
     }
   }
 </style>
