@@ -2,32 +2,51 @@
   <div class="index-container">
     <div class="index-header">
       <div class="header-box">
-        <div class="me">我的</div>
-        <div class="recommend">推荐</div>
-        <div class="discovery">发现</div>
+        <div class="me" @click="showComp('v-my',1)" :class="{'active': currState==1}">我的</div>
+        <div class="recommend" @click="showComp('v-recommend',2)" :class="{'active': currState==2}">推荐</div>
+        <div class="discovery" @click="showComp('v-discovery',3)" :class="{'active': currState==3}">发现</div>
       </div>
+      <div class="menu"></div>
+      <div class="search"></div>
     </div>
-    <div class="menu"></div>
-    <div class="search"></div>
+    <component :is="currComp"></component>
   </div>
 </template>
 
 <script>
+import recommend from '../components/recommend'
+import discovery from '../components/discovery'
+import my from '../components/my'
+
 export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      currComp: 'v-recommend',
+      currState: 2
+    }
+  },
+  components: {
+    'v-recommend': recommend,
+    'v-discovery': discovery,
+    'v-my': my
+  },
+  methods: {
+    showComp (comId, state) {
+      console.log(comId, state)
+      this.currComp = comId
+      this.currState = state
     }
   }
-}‘’
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
   .index-container {
-    position: relative;
     .index-header {
+      position: relative;      
       height: 42px;
       background: #f83;
       .header-box {
@@ -37,6 +56,9 @@ export default {
         &>div {
           flex: 1;
           line-height: 42px;
+          &.active {
+            color: #fff;
+          }
         }
         .me {
           text-align: right;
@@ -52,7 +74,7 @@ export default {
     .menu {
       position: absolute;
       top: 50%;
-      margin-top: -1px;
+      margin-top: -1px;;
       left: 17px;
       width: 22px;
       height: 2px;
