@@ -1,6 +1,14 @@
 <template>
   <div class="recommend">
-    推荐
+    <nav>
+      <ul>
+        <li>首页</li>
+        <li>精选</li>
+        <li>排行榜</li>
+        <li>电台</li>
+        <li>MV</li>
+      </ul>
+    </nav>
   </div>
 </template>
 

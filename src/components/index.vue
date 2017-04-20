@@ -34,7 +34,6 @@ export default {
   },
   methods: {
     showComp (comId, state) {
-      console.log(comId, state)
       this.currComp = comId
       this.currState = state
     }
