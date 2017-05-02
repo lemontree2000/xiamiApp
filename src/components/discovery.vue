@@ -1,6 +1,13 @@
 <template>
   <div class="recommend">
-    发现
+    <div class="recommend-header">
+      <div class="scene-bar">
+
+      </div>
+      <div class="quick-list">
+
+      </div>
+    </div>
   </div>
 </template>
 
