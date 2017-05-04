@@ -35,6 +35,15 @@
     
 </script>
 
-<style lang="less">
-    
+<style lang="less" scoped>
+  .recommend {
+    background: #f8f8f8;
+    .recommend-header {
+      background: #fff;
+      .scene-bar {
+        height: 55px;
+        border-bottom: 1px solid #e6e6e6;
+      }
+    }
+  }
 </style>
