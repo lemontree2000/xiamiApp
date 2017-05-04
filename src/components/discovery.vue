@@ -16,6 +16,18 @@
         </ul>      
       </div>
     </div>
+    <div class="recommend-other">
+      <ul>
+        <li class="other-item">
+          <span class="other-icon"></span>
+          <div class="other-content">
+            <span class="other-title">社区</span>
+            <span class="other-sub">VIP专属福利</span>
+            <span class="go-icon"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
