@@ -42,7 +42,10 @@
       background: #fff;
       .scene-bar {
         height: 55px;
+        line-height: 55px;
         border-bottom: 1px solid #e6e6e6;
+        padding: 0 19px;
+        font-size: #323232;
       }
     }
   }
