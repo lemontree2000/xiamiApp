@@ -47,6 +47,15 @@
         padding: 0 19px;
         font-size: #323232;
       }
+      .quick-list {
+        .quick-box {
+          font-size: 0;
+          .quick-item {
+            width: 25%;
+            display: inline-block;
+          }  
+        }  
+      }
     }
   }
 </style>
